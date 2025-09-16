@@ -23,7 +23,9 @@ function displayList() {
 
 //search Item
 function filterItems(searchTerm) {
-	return shoppingList.filter((item) => item.includes(searchTerm));
+	return shoppingList.filter((item) =>
+		item.toLowerCase().includes(searchTerm.toLowerCase())
+	);
 }
 
 console.log("Array Manipulation Basics");
@@ -44,3 +46,5 @@ console.log("Display Shopping List:");
 displayList();
 console.log('SearchTerm is "a" :\n', filterItems("a"));
 console.log('SearchTerm is "Mi" :\n', filterItems("Mi"));
+console.log('SearchTerm is "mi" :\n', filterItems("mi"));
+console.log('SearchTerm is "ba" :\n', filterItems("ba"));
